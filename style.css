@@ -1,33 +1,46 @@
+body {
+    background: #323232;
+    margin-top: 31px;
+}
+
 .container {
     width: 350px;
     height: 400px;
+    max-width: 950px;
+    margin: auto;
     padding: 15px 10px 50px 10px;
-    background: #EEE;
-    border-radius: 13px;
+    color: white;
+    background: #212121;
+    border: 8px solid #03c9d3;
+    border-radius: 20px;
+    font-family: Roboto, sans-serif;
     display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: 30px auto 120px;
+    grid-template-columns: auto 200px auto;
+    grid-template-rows: 50px 230px auto;
     grid-template-areas:
-            "slc-ci"
-            "cnvs"
-            "h2";
+            ". slc-c ."
+            ". cnvs ."
+            ". h2 .";
 }
 
-.grid-area {
-    justify-self: center;
-    align-self: center;
-}
-
-.select-color-input {
-    grid-area: slc-ci;
+.select-color {
+    grid-area: slc-c;
+    justify-self: end;
 }
 
 .display-color-canvas {
     grid-area: cnvs;
-    background: white;
+    justify-self: center;
+    align-self: center;
+    background: #03c9d3;
     border-radius: 13px;
+    width: 200px;
+    height: 200px;
+    border: 4px solid black;
 }
 
 .subhead {
     grid-area: h2;
+    justify-self: start;
+    font-size: 13px;
 }
