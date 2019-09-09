@@ -1,0 +1,33 @@
+.container {
+    width: 350px;
+    height: 400px;
+    padding: 15px 10px 50px 10px;
+    background: #EEE;
+    border-radius: 13px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 30px auto 120px;
+    grid-template-areas:
+            "slc-ci"
+            "cnvs"
+            "h2";
+}
+
+.grid-area {
+    justify-self: center;
+    align-self: center;
+}
+
+.select-color-input {
+    grid-area: slc-ci;
+}
+
+.display-color-canvas {
+    grid-area: cnvs;
+    background: white;
+    border-radius: 13px;
+}
+
+.subhead {
+    grid-area: h2;
+}
