@@ -4,20 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Color selector</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
 </head>
 <body>
-<div class="container grid-area">
-    <div class="select-color-input grid-area">
-        <label for="select-color">Select color: </label>
-        <input type="color" id="select-color" value="#55A4B1">
+<div class="container" id="container">
+    <div class="select-color" id="displayColor">
+        <label for="colorWell">Select color:</label>
+        <input type="color" id="colorWell" value="#03c9d3" onchange="doSetNewColor(this.value)">
     </div>
-    <canvas class="display-color-canvas grid-area" width="200" height="200"></canvas>
-    <div class="subhead grid-area">
-        <h2 class="HEX-value">HEX: </h2>
-        <h2 class="RGB-value">RGB: </h2>
-        <h2 class="HSL-value">HSL: </h2>
+    <span class="display-color-canvas" id="demoColor"></span>
+    <div class="subhead">
+        <h2 class="HEX-value" id="hexColor">HEX: <span>#03c9d3</span></h2>
+        <h2 class="RGB-value" id="rgbColor">RGB: <span>3, 201, 211</span></h2>
+        <h2 class="HSL-value" id="hslColor">HSL: <span>183°, 97%, 42%</span></h2>
     </div>
 </div>
 </body>
